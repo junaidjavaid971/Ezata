@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listview_background_shape"
+    tools:ignore="MissingDefaultResource">
+
+    <solid android:color="@color/framelayout_solid" />
+</shape>
