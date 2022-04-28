@@ -195,6 +195,7 @@
                             android:src="@drawable/ic_activedot" />
 
                         <LinearLayout
+                            android:id="@+id/activeLayout"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
@@ -215,6 +216,7 @@
                         </LinearLayout>
 
                         <ImageView
+                            android:id="@+id/activeCheck"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -223,6 +225,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/pauseLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
@@ -240,6 +243,7 @@
                             android:src="@drawable/ic_pausedot" />
 
                         <LinearLayout
+
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
@@ -260,6 +264,7 @@
                         </LinearLayout>
 
                         <ImageView
+                            android:id="@+id/pauseCheck"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -269,6 +274,7 @@
                     </LinearLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/timerLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
@@ -308,8 +314,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:background="@drawable/ic_circle"
-                            android:backgroundTint="@color/black"
+                            android:background="@drawable/ic_black_circle"
                             android:padding="@dimen/_5sdp"
                             android:src="@drawable/ic_baseline_access_alarm_24"
                             android:text="30M"
@@ -360,6 +365,7 @@
                             android:src="@drawable/ic_inactivedot" />
 
                         <LinearLayout
+                            android:id="@+id/inactiveLayout"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
@@ -380,6 +386,7 @@
                         </LinearLayout>
 
                         <ImageView
+                            android:id="@+id/inactiveCheck"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

@@ -167,6 +167,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/activeLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -200,6 +201,7 @@
                         </LinearLayout>
 
                         <ImageView
+                            android:id="@+id/activeCheck"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -208,6 +210,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/pauseLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
@@ -242,6 +245,7 @@
                         </LinearLayout>
 
                         <ImageView
+                            android:id="@+id/pauseCheck"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -322,6 +326,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <LinearLayout
+                        android:id="@+id/inactiveLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
@@ -357,6 +362,7 @@
                         </LinearLayout>
 
                         <ImageView
+                            android:id="@+id/inactiveCheck"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

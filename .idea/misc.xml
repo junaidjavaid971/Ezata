@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/drawable/ic_active.xml" value="0.176" />
-        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/drawable/ic_inactive.xml" value="0.176" />
-        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/drawable/ic_pause.xml" value="0.176" />
-        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/activity_main.xml" value="0.196875" />
-        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/nav_drawer.xml" value="0.136" />
-        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/spinner_item.xml" value="0.4" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/drawable/ic_active.xml" value="0.1" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/drawable/ic_black_circle.xml" value="0.1315" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/drawable/ic_circle.xml" value="0.1965" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/drawable/ic_pausedot.xml" value="0.1155" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/nav_drawer.xml" value="0.31952662721893493" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/spinner_item.xml" value="0.1817269076305221" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout-large/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout/activity_main.xml" value="0.15830800405268491" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout/nav_drawer.xml" value="0.25" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/drawable/button_shapes.xml" value="0.244" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/drawable/ic_circle.xml" value="0.244" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/activity_main.xml" value="0.12" />
