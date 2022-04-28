@@ -37,9 +37,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), state);
-        Spinner spinner = findViewById(R.id.spinner);
-        spinner.setAdapter(customAdapter);
+
         binding.inprogress.setVisibility(View.GONE);
         binding.ivPrepareFoodSelect.setVisibility(View.VISIBLE);
         binding.ivPrepareOrder.setVisibility(View.GONE);

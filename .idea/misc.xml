@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/drawable/ic_inactive.xml" value="0.176" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/drawable/ic_pause.xml" value="0.176" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/activity_main.xml" value="0.196875" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/nav_drawer.xml" value="0.136" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/spinner_item.xml" value="0.4" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/drawable/button_shapes.xml" value="0.244" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/drawable/ic_circle.xml" value="0.244" />
         <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/activity_main.xml" value="0.12" />
