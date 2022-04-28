@@ -50,8 +50,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         binding.ivPrepareOrder.setVisibility(View.GONE);
 
         binding.drawer.findViewById(R.id.ivActive).setOnClickListener(v -> {
-            binding.drawer.findViewById(R.id.layoutNavigationItems).setVisibility(View.GONE);
-            binding.drawer.findViewById(R.id.layouStatus).setVisibility(View.VISIBLE);
+            if (binding.drawer.findViewById(R.id.layoutNavigationItems).getVisibility() == View.VISIBLE){
+                binding.drawer.findViewById(R.id.layoutNavigationItems).setVisibility(View.GONE);
+                binding.drawer.findViewById(R.id.layouStatus).setVisibility(View.VISIBLE);
+            }
+           else {
+                binding.drawer.findViewById(R.id.layoutNavigationItems).setVisibility(View.VISIBLE);
+                binding.drawer.findViewById(R.id.layouStatus).setVisibility(View.GONE);
+            }
         });
 
         manageStateClick();
@@ -108,6 +114,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.activeCheck).setVisibility(View.VISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.inactiveCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.pauseCheck).setVisibility(View.INVISIBLE);
+            binding.drawer.findViewById(R.id.layoutNavigationItems).setVisibility(View.VISIBLE);
+            binding.drawer.findViewById(R.id.layouStatus).setVisibility(View.INVISIBLE);
             activeState();
         });
         binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.pauseLayout).setOnClickListener(view -> {
@@ -115,6 +123,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.activeCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.inactiveCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.pauseCheck).setVisibility(View.VISIBLE);
+            binding.drawer.findViewById(R.id.layoutNavigationItems).setVisibility(View.VISIBLE);
+            binding.drawer.findViewById(R.id.layouStatus).setVisibility(View.INVISIBLE);
             pauseState();
         });
 
@@ -124,6 +134,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.activeCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.inactiveCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.pauseCheck).setVisibility(View.VISIBLE);
+            binding.drawer.findViewById(R.id.layoutNavigationItems).setVisibility(View.VISIBLE);
+            binding.drawer.findViewById(R.id.layouStatus).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.timerLayout)
                     .findViewById(R.id.tv15M).setBackgroundResource(R.drawable.ic_black_circle);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.timerLayout)
@@ -140,6 +152,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.activeCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.inactiveCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.pauseCheck).setVisibility(View.VISIBLE);
+            binding.drawer.findViewById(R.id.layoutNavigationItems).setVisibility(View.VISIBLE);
+            binding.drawer.findViewById(R.id.layouStatus).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.timerLayout)
                     .findViewById(R.id.tv15M).setBackgroundResource(R.drawable.ic_circle);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.timerLayout)
@@ -156,6 +170,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.activeCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.inactiveCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.pauseCheck).setVisibility(View.VISIBLE);
+            binding.drawer.findViewById(R.id.layoutNavigationItems).setVisibility(View.VISIBLE);
+            binding.drawer.findViewById(R.id.layouStatus).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.timerLayout)
                     .findViewById(R.id.tv15M).setBackgroundResource(R.drawable.ic_circle);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.timerLayout)
@@ -171,6 +187,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.activeCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.inactiveCheck).setVisibility(View.VISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.pauseCheck).setVisibility(View.INVISIBLE);
+            binding.drawer.findViewById(R.id.layoutNavigationItems).setVisibility(View.VISIBLE);
+            binding.drawer.findViewById(R.id.layouStatus).setVisibility(View.INVISIBLE);
             inactiveState();
         });
     }
