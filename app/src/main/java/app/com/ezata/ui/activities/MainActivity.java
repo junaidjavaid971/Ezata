@@ -41,6 +41,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         binding.inprogress.setVisibility(View.GONE);
         binding.ivPrepareFoodSelect.setVisibility(View.VISIBLE);
         binding.ivPrepareOrder.setVisibility(View.GONE);
+
+        binding.drawer.findViewById(R.id.ivActive).setOnClickListener(v -> {
+            binding.drawer.findViewById(R.id.layoutNavigationItems).setVisibility(View.GONE);
+            binding.drawer.findViewById(R.id.layouStatus).setVisibility(View.VISIBLE);
+        });
         binding.ivHistory.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), HistoryActivity.class)));
         binding.ivMenu.setOnClickListener(view -> {
             openNavDrawer();

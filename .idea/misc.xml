@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/drawable/ic_active.xml" value="0.176" />
         <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/drawable/ic_inactive.xml" value="0.176" />
         <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/drawable/ic_pause.xml" value="0.176" />
         <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/activity_main.xml" value="0.196875" />
