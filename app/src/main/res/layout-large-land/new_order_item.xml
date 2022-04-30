@@ -52,6 +52,7 @@
                     android:paddingTop="@dimen/_2sdp"
                     android:text="@string/str_CustomerName"
                     android:textColor="@color/black"
+                    android:paddingBottom="@dimen/_5sdp"
                     android:textSize="@dimen/_7ssp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -67,8 +68,7 @@
                     android:id="@+id/tvTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:fontFamily="@font/inter_regular"
                     android:text="@string/str_Time"
                     android:textColor="#1CAE3C"
@@ -79,7 +79,6 @@
                     android:id="@+id/tvItemsCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_16sdp"
                     android:paddingTop="@dimen/_3sdp"
                     android:text="@string/items"
                     android:textColor="#323232"

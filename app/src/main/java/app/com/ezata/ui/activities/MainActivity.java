@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     int[] state = {R.drawable.ic_active, R.drawable.ic_pause, R.drawable.ic_inactive};
 
     public static final String SHARED_PREFS = "sharedPrefs";
-    String State = "s", text, paused = "2", pauseText = "2";
+    String State = "s", text, paused = "2", pauseText = "2", menuState, loadMenu = "ActiveMenu";
     ImageView ivActive;
 
     @Override
@@ -206,8 +206,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.activeCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.inactiveCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.pauseCheck).setVisibility(View.VISIBLE);
-//            binding.drawer.findViewById(R.id.layoutNavigationItems).setVisibility(View.VISIBLE);
-//           binding.drawer.findViewById(R.id.layouStatus).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.timerLayout).setVisibility(View.VISIBLE);
             pauseState();
         });
@@ -286,6 +284,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(State, "Active");
+        editor.putString(menuState, "ActiveMenu");
         editor.apply();
     }
 
@@ -294,6 +293,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(State, "Pause");
         editor.putString(paused, pauseText);
+        editor.putString(menuState, "PauseMenu");
         editor.apply();
     }
 
@@ -302,6 +302,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(State, "Inactive");
+        editor.putString(menuState, "InActiveMenu");
         editor.apply();
     }
 
@@ -309,6 +310,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         text = sharedPreferences.getString(State, "Active");
         pauseText = sharedPreferences.getString(paused, pauseText);
+        loadMenu = sharedPreferences.getString(menuState, loadMenu);
     }
 
     public void updateViews() {
@@ -316,12 +318,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.activeCheck).setVisibility(View.VISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.inactiveCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.pauseCheck).setVisibility(View.INVISIBLE);
+            binding.ivMenu.setImageResource(R.drawable.ic_menu_active);
             ivActive.setImageResource(state[0]);
         }
         if (text.equals("Pause")) {
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.activeCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.inactiveCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.pauseCheck).setVisibility(View.VISIBLE);
+            binding.ivMenu.setImageResource(R.drawable.ic_menu_paused);
             ivActive.setImageResource(state[1]);
         }
 
@@ -329,6 +333,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.activeCheck).setVisibility(View.INVISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.inactiveCheck).setVisibility(View.VISIBLE);
             binding.drawer.findViewById(R.id.layouStatus).findViewById(R.id.pauseCheck).setVisibility(View.INVISIBLE);
+            binding.ivMenu.setImageResource(R.drawable.ic_menu_inactive);
             ivActive.setImageResource(state[2]);
         }
         if (pauseText.equals("1")) {

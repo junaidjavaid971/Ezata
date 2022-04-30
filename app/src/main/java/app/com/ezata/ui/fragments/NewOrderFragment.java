@@ -31,10 +31,10 @@ public class NewOrderFragment extends Fragment {
 
     private void initRecylerview() {
         orders=new NewOrder[] {
-                new NewOrder("J83NW", "Alex T.", "32 Mins","6 item" ),
-                new NewOrder("K34LE", "James R.", "32 Mins","6 item" ),
-                new NewOrder("K40RP", "Pat W.", "32 Mins","6 item" ),
-                new NewOrder("J83NW", "Alex T.", "32 Mins","6 item" )
+                new NewOrder("J83NW", "Alex T.", "32 Mins","6 items" ),
+                new NewOrder("K34LE", "James R.", "32 Mins","6 items" ),
+                new NewOrder("K40RP", "Pat W.", "32 Mins","6 items" ),
+                new NewOrder("J83NW", "Alex T.", "32 Mins","6 items" )
 
         };
 
