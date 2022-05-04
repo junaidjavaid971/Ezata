@@ -1,76 +1,53 @@
-package app.com.ezata.adapter;
+package app.com.ezata.adapter
 
-import android.annotation.SuppressLint;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import app.com.ezata.model.HistoryDetails
+import app.com.ezata.OnItemClicked
+import androidx.recyclerview.widget.RecyclerView
+import android.view.ViewGroup
+import android.view.LayoutInflater
+import app.com.ezata.R
+import android.annotation.SuppressLint
+import android.view.View
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.List;
-
-import app.com.ezata.OnItemClicked;
-import app.com.ezata.R;
-import app.com.ezata.model.HistoryDetails;
-
-public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHolder> {
-    HistoryDetails[] historyDetails;
-    OnItemClicked onItemClicked;
-
-    public HistoryAdapter(HistoryDetails[] historyDetails, OnItemClicked onItemClicked) {
-        this.historyDetails = historyDetails;
-        this.onItemClicked = onItemClicked;
+class HistoryAdapter(var historyDetails: Array<HistoryDetails>, var onItemClicked: OnItemClicked) :
+    RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder {
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val listItem =
+            layoutInflater.inflate(R.layout.history_item, parent, false)
+        return ViewHolder(listItem)
     }
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem = layoutInflater.inflate(R.layout.history_item, parent, false);
-        ViewHolder viewHolder = new HistoryAdapter.ViewHolder(listItem);
-        return viewHolder;
+    override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
+        val details = historyDetails[position]
+        holder.tvDate.text = details.date
+        holder.tvTime.text = details.time
+        holder.tvOrderNmber.text = details.orderNumber
+        holder.tvCustomerName.text = details.customerName
+        holder.tvType.text = details.type
+        holder.tvAmount.text = details.amount
+        holder.tvStatus.text = details.status
+        holder.fullSize.setOnClickListener { onItemClicked.onItemSelect(position) }
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        HistoryDetails details = historyDetails[position];
-        holder.tvDate.setText(details.getDate());
-        holder.tvTime.setText(details.getTime());
-        holder.tvOrderNmber.setText(details.getOrderNumber());
-        holder.tvCustomerName.setText(details.getCustomerName());
-        holder.tvType.setText(details.getType());
-        holder.tvAmount.setText(details.getAmount());
-        holder.tvStatus.setText(details.getStatus());
-        holder.fullSize.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onItemClicked.onItemSelect(position);
-            }
-        });
+    override fun getItemCount(): Int {
+        return historyDetails.size
     }
 
-    @Override
-    public int getItemCount() {
-        return historyDetails.length;
-    }
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var tvDate: TextView = itemView.findViewById(R.id.tvDate)
+        var tvTime: TextView = itemView.findViewById(R.id.tvTime)
+        var tvOrderNmber: TextView = itemView.findViewById(R.id.tvOrderNumber)
+        var tvCustomerName: TextView = itemView.findViewById(R.id.tvCustomerName)
+        var tvType: TextView = itemView.findViewById(R.id.tvType)
+        var tvAmount: TextView = itemView.findViewById(R.id.tvAmount)
+        var tvStatus: TextView = itemView.findViewById(R.id.tvStatus)
+        var fullSize: ConstraintLayout = itemView.findViewById(R.id.fullsize)
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvDate, tvTime, tvOrderNmber, tvCustomerName, tvType, tvAmount, tvStatus;
-        ConstraintLayout fullSize;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            tvDate = itemView.findViewById(R.id.tvDate);
-            tvTime = itemView.findViewById(R.id.tvTime);
-            tvOrderNmber = itemView.findViewById(R.id.tvOrderNumber);
-            tvCustomerName = itemView.findViewById(R.id.tvCustomerName);
-            tvType = itemView.findViewById(R.id.tvType);
-            tvAmount = itemView.findViewById(R.id.tvAmount);
-            tvStatus = itemView.findViewById(R.id.tvStatus);
-            fullSize = itemView.findViewById(R.id.fullsize);
-        }
     }
 }

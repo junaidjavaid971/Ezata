@@ -1,95 +1,82 @@
-package app.com.ezata.ui.fragments;
+package app.com.ezata.ui.fragments
 
-import android.app.AlertDialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
+import android.app.AlertDialog
+import android.graphics.Color
+import app.com.ezata.model.InProgressOrderDetail
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import android.os.Bundle
+import androidx.databinding.DataBindingUtil
+import app.com.ezata.R
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import app.com.ezata.adapter.InProgressOrderDetailAdapter
+import android.graphics.drawable.ColorDrawable
+import android.view.View
+import android.view.WindowManager
+import android.widget.ImageView
+import androidx.fragment.app.Fragment
+import app.com.ezata.databinding.FragmentInProgressOrderDetailsBinding
 
-import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-
-import app.com.ezata.R;
-import app.com.ezata.adapter.InProgressOrderDetailAdapter;
-
-import app.com.ezata.adapter.OrderDetailAdapter;
-import app.com.ezata.databinding.FragmentInProgressOrderDetailsBinding;
-import app.com.ezata.model.InProgressOrderDetail;
-
-
-public class InProgressOrderDetailsFragment extends Fragment {
-    FragmentInProgressOrderDetailsBinding binding;
-    InProgressOrderDetail[] orders;
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_in_progress_order_details, container, false);
-        View view = binding.getRoot();
-        binding.ivFullsize.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showALertDialog();
-            }
-        });
-        initRecylerview();
-        return view;
+class InProgressOrderDetailsFragment : Fragment() {
+    var binding: FragmentInProgressOrderDetailsBinding? = null
+    lateinit var orders: Array<InProgressOrderDetail>
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_in_progress_order_details,
+            container,
+            false
+        )
+        val view = binding?.root
+        binding?.ivFullsize?.setOnClickListener { showALertDialog() }
+        initRecylerview()
+        return view
     }
 
-    private void showALertDialog() {
-        orders = new InProgressOrderDetail[]{
-                new InProgressOrderDetail("1x", "Cheeseburger", "$5.78", "-No Ketchup"),
-                new InProgressOrderDetail("2x", "Fries", "$2.39", ""),
-                new InProgressOrderDetail("1x", "Vanilla Milkshake", "$1.82", ""),
-                new InProgressOrderDetail("1x", "Garden Salad.", "$3.25", ""),
-                new InProgressOrderDetail("1x", "Diet Coke.", "$0.89", "")
-
-
-        };
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
-        LayoutInflater inflater1 = getLayoutInflater();
-        View dialogView = inflater1.inflate(R.layout.dialog_inprogress, null);
-        RecyclerView rvOrders = dialogView.findViewById(R.id.rvFoodOrder);
-        rvOrders.setHasFixedSize(true);
-        rvOrders.setLayoutManager(new LinearLayoutManager(getActivity()));
-        InProgressOrderDetailAdapter adapter = new InProgressOrderDetailAdapter(orders);
-        rvOrders.setAdapter(adapter);
-        dialogBuilder.setView(dialogView);
-
-        AlertDialog alertDialog = dialogBuilder.create();
-        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        alertDialog.show();
-
-        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-        layoutParams.copyFrom(alertDialog.getWindow().getAttributes());
-        layoutParams.width = WindowManager.LayoutParams.FILL_PARENT;
-        layoutParams.height = WindowManager.LayoutParams.FILL_PARENT;
-        alertDialog.getWindow().setAttributes(layoutParams);
-
+    private fun showALertDialog() {
+        orders = arrayOf(
+            InProgressOrderDetail("1x", "Cheeseburger", "$5.78", "-No Ketchup"),
+            InProgressOrderDetail("2x", "Fries", "$2.39", ""),
+            InProgressOrderDetail("1x", "Vanilla Milkshake", "$1.82", ""),
+            InProgressOrderDetail("1x", "Garden Salad.", "$3.25", ""),
+            InProgressOrderDetail("1x", "Diet Coke.", "$0.89", "")
+        )
+        val dialogBuilder = AlertDialog.Builder(activity)
+        val inflater1 = layoutInflater
+        val dialogView = inflater1.inflate(R.layout.dialog_inprogress, null)
+        val rvOrders: RecyclerView = dialogView.findViewById(R.id.rvFoodOrder)
+        val icCancelFullScreen = dialogView.findViewById<ImageView>(R.id.ivFullsize)
+        rvOrders.setHasFixedSize(true)
+        rvOrders.layoutManager = LinearLayoutManager(activity)
+        val adapter = InProgressOrderDetailAdapter(orders)
+        rvOrders.adapter = adapter
+        dialogBuilder.setView(dialogView)
+        val alertDialog = dialogBuilder.create()
+        alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        alertDialog.show()
+        icCancelFullScreen.setOnClickListener { v: View? -> alertDialog.dismiss() }
+        val layoutParams = WindowManager.LayoutParams()
+        layoutParams.copyFrom(alertDialog.window!!.attributes)
+        layoutParams.width = WindowManager.LayoutParams.FILL_PARENT
+        layoutParams.height = WindowManager.LayoutParams.FILL_PARENT
+        alertDialog.window!!.attributes = layoutParams
     }
 
-    private void initRecylerview() {
-        orders = new InProgressOrderDetail[]{
-                new InProgressOrderDetail("1x", "Cheeseburger", "$5.78", "-No Ketchup"),
-                new InProgressOrderDetail("2x", "Fries", "$2.39", ""),
-                new InProgressOrderDetail("1x", "Vanilla Milkshake", "$1.82", ""),
-                new InProgressOrderDetail("1x", "Garden Salad.", "$3.25", ""),
-                new InProgressOrderDetail("1x", "Diet Coke.", "$0.89", "")
-
-
-        };
-
-        binding.rvFoodOrder.setHasFixedSize(true);
-        binding.rvFoodOrder.setLayoutManager(new LinearLayoutManager(getActivity()));
-        InProgressOrderDetailAdapter adapter = new InProgressOrderDetailAdapter(orders);
-        binding.rvFoodOrder.setAdapter(adapter);
-
+    private fun initRecylerview() {
+        orders = arrayOf(
+            InProgressOrderDetail("1x", "Cheeseburger", "$5.78", "-No Ketchup"),
+            InProgressOrderDetail("2x", "Fries", "$2.39", ""),
+            InProgressOrderDetail("1x", "Vanilla Milkshake", "$1.82", ""),
+            InProgressOrderDetail("1x", "Garden Salad.", "$3.25", ""),
+            InProgressOrderDetail("1x", "Diet Coke.", "$0.89", "")
+        )
+        binding!!.rvFoodOrder.setHasFixedSize(true)
+        binding!!.rvFoodOrder.layoutManager = LinearLayoutManager(activity)
+        val adapter = InProgressOrderDetailAdapter(orders)
+        binding!!.rvFoodOrder.adapter = adapter
     }
 }

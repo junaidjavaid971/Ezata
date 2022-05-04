@@ -1,47 +1,8 @@
-package app.com.ezata.model;
+package app.com.ezata.model
 
-public class InProgressOrder {
-    String orderNumber;
-    String customerName;
-    String orderTime;
-    String orderCount;
-
-    public InProgressOrder(String orderNumber, String customerName, String orderTime, String orderCount) {
-        this.orderNumber = orderNumber;
-        this.customerName = customerName;
-        this.orderTime = orderTime;
-        this.orderCount = orderCount;
-    }
-
-    public String getOrderNumber() {
-        return orderNumber;
-    }
-
-    public void setOrderNumber(String orderNumber) {
-        this.orderNumber = orderNumber;
-    }
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public String getOrderTime() {
-        return orderTime;
-    }
-
-    public void setOrderTime(String orderTime) {
-        this.orderTime = orderTime;
-    }
-
-    public String getOrderCount() {
-        return orderCount;
-    }
-
-    public void setOrderCount(String orderCount) {
-        this.orderCount = orderCount;
-    }
-}
+class InProgressOrder(
+    var orderNumber: String,
+    var customerName: String,
+    var orderTime: String,
+    var orderCount: String
+)

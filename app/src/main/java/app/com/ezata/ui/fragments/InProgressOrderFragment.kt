@@ -1,45 +1,40 @@
-package app.com.ezata.ui.fragments;
+package app.com.ezata.ui.fragments
 
-import android.os.Bundle;
+import app.com.ezata.model.InProgressOrder
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import android.os.Bundle
+import android.view.View
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import app.com.ezata.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import app.com.ezata.adapter.InProgressOrderAdapter
+import app.com.ezata.databinding.FragmentInProgressBinding
 
-import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import app.com.ezata.R;
-import app.com.ezata.adapter.InProgressOrderAdapter;
-import app.com.ezata.databinding.FragmentInProgressBinding;
-import app.com.ezata.model.InProgressOrder;
-
-public class InProgressOrderFragment extends Fragment {
-    FragmentInProgressBinding binding;
-    InProgressOrder[] list;
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_in_progress, container, false);
-        View view = binding.getRoot();
-        initRecyclerview();
-        return view;
+class InProgressOrderFragment : Fragment() {
+    var binding: FragmentInProgressBinding? = null
+    lateinit var list: Array<InProgressOrder>
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_in_progress, container, false)
+        val view = binding?.root
+        initRecyclerview()
+        return view
     }
 
-    private void initRecyclerview() {
-        list = new InProgressOrder[]{
-                new InProgressOrder("JFOQ12", "Alex Ferguson", "11 Mins", "6 Items"),
-                new InProgressOrder("JFOQ12", "Alex Ferguson", "11 Mins", "6 Items"),
-                new InProgressOrder("JFOQ12", "Alex Ferguson", "11 Mins", "6 Items"),
-                new InProgressOrder("JFOQ12", "Alex Ferguson", "11 Mins", "6 Items")
-        };
-
-        binding.rvInProgress.setHasFixedSize(true);
-        binding.rvInProgress.setLayoutManager(new LinearLayoutManager(getActivity()));
-        InProgressOrderAdapter adapter = new InProgressOrderAdapter(list);
-        binding.rvInProgress.setAdapter(adapter);
+    private fun initRecyclerview() {
+        list = arrayOf(
+            InProgressOrder("JFOQ12", "Alex Ferguson", "11 Mins", "6 Items"),
+            InProgressOrder("JFOQ12", "Alex Ferguson", "11 Mins", "6 Items"),
+            InProgressOrder("JFOQ12", "Alex Ferguson", "11 Mins", "6 Items"),
+            InProgressOrder("JFOQ12", "Alex Ferguson", "11 Mins", "6 Items")
+        )
+        binding!!.rvInProgress!!.setHasFixedSize(true)
+        binding!!.rvInProgress!!.layoutManager = LinearLayoutManager(activity)
+        val adapter = InProgressOrderAdapter(list)
+        binding!!.rvInProgress!!.adapter = adapter
     }
 }

@@ -1,57 +1,43 @@
-package app.com.ezata.adapter;
+package app.com.ezata.adapter
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+import app.com.ezata.model.OnRouteOrders
+import androidx.recyclerview.widget.RecyclerView
+import android.view.ViewGroup
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.ImageView
+import app.com.ezata.R
+import android.widget.TextView
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-import app.com.ezata.R;
-import app.com.ezata.model.OnRouteOrders;
-
-public class OnRouteOrderAdapter extends RecyclerView.Adapter<OnRouteOrderAdapter.ViewHolder>{
-    OnRouteOrders[] orders;
-
-    public OnRouteOrderAdapter(OnRouteOrders[] orders) {
-        this.orders = orders;
+class OnRouteOrderAdapter(var orders: Array<OnRouteOrders>) :
+    RecyclerView.Adapter<OnRouteOrderAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder {
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val listItem =
+            layoutInflater.inflate(R.layout.onroute_item, parent, false)
+        return ViewHolder(listItem)
     }
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem= layoutInflater.inflate(R.layout.onroute_item, parent, false);
-        OnRouteOrderAdapter.ViewHolder viewHolder = new OnRouteOrderAdapter.ViewHolder(listItem);
-        return viewHolder;
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val onRouteOrders = orders[position]
+        holder.tvOrderNumber.text = onRouteOrders.orderNumber
+        holder.tvCourierName.text = onRouteOrders.courierName
+        holder.tvTime.text = onRouteOrders.deliveryTime
+        holder.ivVehicle.setImageResource(onRouteOrders.vehicle)
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        OnRouteOrders onRouteOrders= orders[position];
-        holder.tvOrderNumber.setText(onRouteOrders.getOrderNumber());
-        holder.tvCourierName.setText(onRouteOrders.getCourierName());
-        holder.tvTime.setText(onRouteOrders.getDeliveryTime());
-        holder.ivVehicle.setImageResource(onRouteOrders.getVehicle());
-
+    override fun getItemCount(): Int {
+        return orders.size
     }
 
-    @Override
-    public int getItemCount() {
-        return orders.length;
-    }
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var tvOrderNumber: TextView = itemView.findViewById(R.id.tvOrderNumber)
+        var tvCourierName: TextView = itemView.findViewById(R.id.tvCourierName)
+        var tvTime: TextView = itemView.findViewById(R.id.tvDelieverdTime)
+        var ivVehicle: ImageView = itemView.findViewById(R.id.ivVehicle)
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvOrderNumber,tvCourierName, tvTime;
-        ImageView ivVehicle;
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            tvOrderNumber=itemView.findViewById(R.id.tvOrderNumber);
-            tvCourierName=itemView.findViewById(R.id.tvCourierName);
-            tvTime=itemView.findViewById(R.id.tvDelieverdTime);
-            ivVehicle=itemView.findViewById(R.id.ivVehicle);
-        }
     }
 }

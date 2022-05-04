@@ -1,57 +1,44 @@
-package app.com.ezata.adapter;
+package app.com.ezata.adapter
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import app.com.ezata.model.InProgressOrder
+import androidx.recyclerview.widget.RecyclerView
+import android.view.ViewGroup
+import android.view.LayoutInflater
+import android.view.View
+import app.com.ezata.R
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 
-import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.RecyclerView;
-
-import app.com.ezata.R;
-import app.com.ezata.model.InProgressOrder;
-
-public class InProgressOrderAdapter extends RecyclerView.Adapter<InProgressOrderAdapter.ViewHolder> {
-    InProgressOrder[] list;
-
-    public InProgressOrderAdapter(InProgressOrder[] list) {
-        this.list = list;
+class InProgressOrderAdapter(var list: Array<InProgressOrder>) :
+    RecyclerView.Adapter<InProgressOrderAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder {
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val listItem =
+            layoutInflater.inflate(R.layout.inprogess_item, parent, false)
+        return ViewHolder(listItem)
     }
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem = layoutInflater.inflate(R.layout.inprogess_item, parent, false);
-        InProgressOrderAdapter.ViewHolder viewHolder = new InProgressOrderAdapter.ViewHolder(listItem);
-        return viewHolder;
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val progress = list[position]
+        holder.tvOrderNumber.text = progress.orderNumber
+        holder.tvCustomerName.text = progress.customerName
+        holder.tvOrderTime.text = progress.orderTime
+        holder.tvOrderItems.text = progress.orderCount
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        InProgressOrder progress = list[position];
-        holder.tvOrderNumber.setText(progress.getOrderNumber());
-        holder.tvCustomerName.setText(progress.getCustomerName());
-        holder.tvOrderTime.setText(progress.getOrderTime());
-        holder.tvOrderItems.setText(progress.getOrderCount());
+    override fun getItemCount(): Int {
+        return list.size
     }
 
-    @Override
-    public int getItemCount() {
-        return list.length;
-    }
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var tvOrderNumber: TextView = itemView.findViewById(R.id.tvOrderNumber)
+        var tvCustomerName: TextView = itemView.findViewById(R.id.tvCustomerName)
+        var tvOrderTime: TextView = itemView.findViewById(R.id.tvTime)
+        var tvOrderItems: TextView = itemView.findViewById(R.id.tvItemsCount)
+        var cardView: CardView = itemView.findViewById(R.id.cardview)
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvOrderNumber, tvCustomerName, tvOrderTime, tvOrderItems;
-        CardView cardView;
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            tvOrderNumber = itemView.findViewById(R.id.tvOrderNumber);
-            tvCustomerName = itemView.findViewById(R.id.tvCustomerName);
-            tvOrderTime = itemView.findViewById(R.id.tvTime);
-            tvOrderItems = itemView.findViewById(R.id.tvItemsCount);
-            cardView = itemView.findViewById(R.id.cardview);
-        }
     }
 }

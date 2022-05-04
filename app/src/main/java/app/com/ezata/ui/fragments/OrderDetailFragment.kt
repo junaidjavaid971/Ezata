@@ -1,89 +1,78 @@
-package app.com.ezata.ui.fragments;
+package app.com.ezata.ui.fragments
 
-import android.app.AlertDialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
+import android.app.AlertDialog
+import android.graphics.Color
+import app.com.ezata.model.OrderDetail
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import android.os.Bundle
+import androidx.databinding.DataBindingUtil
+import app.com.ezata.R
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import app.com.ezata.adapter.OrderDetailAdapter
+import android.graphics.drawable.ColorDrawable
+import android.view.View
+import android.view.WindowManager
+import android.widget.ImageView
+import androidx.fragment.app.Fragment
+import app.com.ezata.databinding.FragmentOrderDetailBinding
 
-import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.util.DisplayMetrics;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-
-import app.com.ezata.R;
-import app.com.ezata.adapter.NewOrderAdapter;
-import app.com.ezata.adapter.OrderDetailAdapter;
-import app.com.ezata.databinding.FragmentOrderDetailBinding;
-import app.com.ezata.model.NewOrder;
-import app.com.ezata.model.OrderDetail;
-
-public class OrderDetailFragment extends Fragment {
-    FragmentOrderDetailBinding binding;
-    OrderDetail[] orders;
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_order_detail, container, false);
-        View view = binding.getRoot();
-        initRecyclerview();
-        binding.ivFullsize.setOnClickListener(view1 -> {
-            showAlertDialog();
-
-        });
-        return view;
+class OrderDetailFragment : Fragment() {
+    var binding: FragmentOrderDetailBinding? = null
+    lateinit var orders: Array<OrderDetail>
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_order_detail, container, false)
+        val view = binding?.root
+        initRecyclerview()
+        binding?.ivFullsize?.setOnClickListener { view1: View? -> showAlertDialog() }
+        return view
     }
 
-    private void showAlertDialog() {
-        orders = new OrderDetail[]{
-                new OrderDetail("1x", "Cheeseburger", "$5.78", "- No Ketchup"),
-                new OrderDetail("2x", "Fries", "$2.39", ""),
-                new OrderDetail("1x", "Milk Shake", "$3.25", ""),
-                new OrderDetail("1x", "Garden Salad", "$3.25", ""),
-                new OrderDetail("1x", "Diet Coke", "$0.89", "")
-
-
-        };
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
-        LayoutInflater inflater1 = getLayoutInflater();
-        View dialogView = inflater1.inflate(R.layout.dialog_neworder, null);
-        RecyclerView rvOrders = dialogView.findViewById(R.id.rvFoodOrder);
-        rvOrders.setHasFixedSize(true);
-        rvOrders.setLayoutManager(new LinearLayoutManager(getActivity()));
-        OrderDetailAdapter adapter = new OrderDetailAdapter(orders);
-        rvOrders.setAdapter(adapter);
-        dialogBuilder.setView(dialogView);
-
-        AlertDialog alertDialog = dialogBuilder.create();
-        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        alertDialog.show();
-
-        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-        layoutParams.copyFrom(alertDialog.getWindow().getAttributes());
-        layoutParams.width = WindowManager.LayoutParams.FILL_PARENT;
-        layoutParams.height = WindowManager.LayoutParams.FILL_PARENT;
-        alertDialog.getWindow().setAttributes(layoutParams);
+    private fun showAlertDialog() {
+        orders = arrayOf(
+            OrderDetail("1x", "Cheeseburger", "$5.78", "- No Ketchup"),
+            OrderDetail("2x", "Fries", "$2.39", ""),
+            OrderDetail("1x", "Milk Shake", "$3.25", ""),
+            OrderDetail("1x", "Garden Salad", "$3.25", ""),
+            OrderDetail("1x", "Diet Coke", "$0.89", "")
+        )
+        val dialogBuilder = AlertDialog.Builder(activity)
+        val inflater1 = layoutInflater
+        val dialogView = inflater1.inflate(R.layout.dialog_neworder, null)
+        val rvOrders: RecyclerView = dialogView.findViewById(R.id.rvFoodOrder)
+        val icCancelFullScreen = dialogView.findViewById<ImageView>(R.id.ivFullsize)
+        rvOrders.setHasFixedSize(true)
+        rvOrders.layoutManager = LinearLayoutManager(activity)
+        val adapter = OrderDetailAdapter(orders)
+        rvOrders.adapter = adapter
+        dialogBuilder.setView(dialogView)
+        val alertDialog = dialogBuilder.create()
+        alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        alertDialog.show()
+        icCancelFullScreen.setOnClickListener { v: View? -> alertDialog.dismiss() }
+        val layoutParams = WindowManager.LayoutParams()
+        layoutParams.copyFrom(alertDialog.window!!.attributes)
+        layoutParams.width = WindowManager.LayoutParams.FILL_PARENT
+        layoutParams.height = WindowManager.LayoutParams.FILL_PARENT
+        alertDialog.window!!.attributes = layoutParams
     }
 
-    private void initRecyclerview() {
-        orders = new OrderDetail[]{
-                new OrderDetail("1x", "Cheeseburger", "$5.78", "- No Ketchup"),
-                new OrderDetail("2x", "Fries", "$2.39", ""),
-                new OrderDetail("1x", "Milk Shake", "$3.25", ""),
-                new OrderDetail("1x", "Garden Salad", "$3.25", ""),
-                new OrderDetail("1x", "Diet Coke", "$0.89", "")
-
-        };
-
-        binding.rvFoodOrder.setHasFixedSize(true);
-        binding.rvFoodOrder.setLayoutManager(new LinearLayoutManager(getActivity()));
-        OrderDetailAdapter adapter = new OrderDetailAdapter(orders);
-        binding.rvFoodOrder.setAdapter(adapter);
+    private fun initRecyclerview() {
+        orders = arrayOf(
+            OrderDetail("1x", "Cheeseburger", "$5.78", "- No Ketchup"),
+            OrderDetail("2x", "Fries", "$2.39", ""),
+            OrderDetail("1x", "Milk Shake", "$3.25", ""),
+            OrderDetail("1x", "Garden Salad", "$3.25", ""),
+            OrderDetail("1x", "Diet Coke", "$0.89", "")
+        )
+        binding!!.rvFoodOrder.setHasFixedSize(true)
+        binding!!.rvFoodOrder.layoutManager = LinearLayoutManager(activity)
+        val adapter = OrderDetailAdapter(orders)
+        binding!!.rvFoodOrder.adapter = adapter
     }
 }

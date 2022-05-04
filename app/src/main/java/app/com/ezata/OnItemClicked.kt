@@ -1,5 +1,5 @@
-package app.com.ezata;
+package app.com.ezata
 
-public interface OnItemClicked {
-    void onItemSelect(int position);
+interface OnItemClicked {
+    fun onItemSelect(position: Int)
 }
