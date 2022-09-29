@@ -3,43 +3,97 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/bg_btn_orange.xml" value="0.1435" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/circle_bg.xml" value="0.188" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/ic_car.xml" value="0.1" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/ic_phone.xml" value="0.1435" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/ic_phone_registration.xml" value="0.1435" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/neworder_item_shape.xml" value="0.1755" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/prepare_orders.xml" value="0.1695" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/selectpickup.xml" value="0.1695" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-land/activity_registration.xml" value="0.15507692762747333" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/activity_history.xml" value="0.14769231202616506" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/activity_main.xml" value="0.1984375" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/activity_pick_up_ready.xml" value="0.1" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/activity_registration.xml" value="0.176" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/dialog_history.xml" value="0.152" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/dialog_inprogress.xml" value="0.12" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/fragment_in_progress_order_details.xml" value="0.16328125" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/inprogess_item.xml" value="0.16328125" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/nav_drawer.xml" value="0.171484375" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/new_order_item.xml" value="0.1984375" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/onroute_item.xml" value="0.1984375" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/order_detail_item.xml" value="0.1984375" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/pickup_item.xml" value="0.18461539003270633" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large/activity_main.xml" value="0.178515625" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large/activity_registration.xml" value="0.150390625" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/activity_main.xml" value="0.20052083333333334" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/activity_pick_up_ready.xml" value="0.203125" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/activity_registration.xml" value="0.1" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/dialog_inprogress.xml" value="0.23541666666666666" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/fragment_in_progress_order_details.xml" value="0.203125" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/fragment_order_detail.xml" value="0.23802083333333332" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/loading_layout_orders.xml" value="0.203125" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/nav_drawer.xml" value="0.20052083333333334" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/new_order_item.xml" value="0.203125" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/on_route_countdown_dialog.xml" value="0.20052083333333334" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/pickup_item.xml" value="0.23802083333333332" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/pickuplocation_item.xml" value="0.18461539003270633" />
-        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/ready_for_pickup_countdown_dialog.xml" value="0.18461539003270633" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/activity_main.xml" value="0.1" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/dialog_history.xml" value="0.13546977421704298" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/dialog_inprogress.xml" value="0.196875" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/dialog_neworder.xml" value="0.176" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/fragment_in_progress.xml" value="0.196875" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/fragment_in_progress_order_details.xml" value="0.536" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/nav_drawer.xml" value="0.1" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/order_detail_item.xml" value="0.196875" />
+        <entry key="..\:/Documents/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/spinner_item.xml" value="0.1" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/drawable/ic_active.xml" value="0.1" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/drawable/ic_black_circle.xml" value="0.1315" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/drawable/ic_circle.xml" value="0.1965" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/drawable/ic_pausedot.xml" value="0.1155" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/nav_drawer.xml" value="0.31952662721893493" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/spinner_item.xml" value="0.1817269076305221" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout-large/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout/activity_main.xml" value="0.15830800405268491" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/Ezata/app/src/main/res/layout/nav_drawer.xml" value="0.25" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/EzataNew/app/src/main/res/drawable/bg_btn_orange.xml" value="0.1195" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/EzataNew/app/src/main/res/drawable/bg_buttons_pickup.xml" value="0.131" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/EzataNew/app/src/main/res/drawable/ic_search.xml" value="0.1165" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/EzataNew/app/src/main/res/layout-large-land/activity_registration.xml" value="0.33" />
+        <entry key="..\:/Users/A/AndroidStudioProjects/EzataNew/app/src/main/res/layout/activity_registration.xml" value="0.4122137404580153" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/drawable/button_shapes.xml" value="0.244" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/drawable/ic_circle.xml" value="0.244" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/activity_main.xml" value="0.12" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/nav_drawer.xml" value="0.12" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/select_merchant_state.xml" value="0.12" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/layout-large-land/spinner_item.xml" value="0.15416666666666667" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/layout-large/activity_main.xml" value="0.11901041666666666" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/layout/activity_main.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/layout/nav_drawer.xml" value="0.11901041666666666" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/layout/select_merchant_state.xml" value="0.11901041666666666" />
+        <entry key="..\:/Users/Junaid Javed/Android Studio Projects/Ezata/app/src/main/res/layout/spinner_item.xml" value="0.11901041666666666" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable-large-land/framelayout_bg.xml" value="0.1505" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable-large-land/neworder_item_shape.xml" value="0.191" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable-large/btn_shape_bg.xml" value="0.191" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable-large/framelayout_bg.xml" value="0.191" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable-large/horizontal_line.xml" value="0.1545" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable-large/line.xml" value="0.1505" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable-large/linear_bg.xml" value="0.191" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable-large/menu.xml" value="0.191" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable-large/more.xml" value="0.1375" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable/button_shapes.xml" value="0.201" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable/ic_alarm.xml" value="0.1735" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable/ic_check.xml" value="0.1505" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable/ic_circle.xml" value="0.201" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable/lower_item_bg.xml" value="0.1505" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/drawable/sort_bg.xml" value="0.1505" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/activity_history.xml" value="0.15" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/activity_pick_up_ready.xml" value="0.1" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/dialog_history.xml" value="0.18" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/dialog_inprogress.xml" value="0.1" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/dialog_neworder.xml" value="0.15" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/fragment_in_progress.xml" value="0.16" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/fragment_in_progress_order_details.xml" value="0.1" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/fragment_new_order.xml" value="0.14192708333333334" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/fragment_order_detail.xml" value="0.12" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/history_item.xml" value="0.16" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/inprogess_item.xml" value="0.25" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/inprogress_detail_item.xml" value="0.12" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/nav_drawer.xml" value="0.2" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/new_order_item.xml" value="0.16" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/onroute_item.xml" value="0.14" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/order_detail_item.xml" value="0.16" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/pickup_item.xml" value="0.25" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/select_merchant_state.xml" value="0.16" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large-land/spinner_item.xml" value="0.13125" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout-large/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/activity_history.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/activity_main.xml" value="0.14" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/activity_pick_up_ready.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/dialog_history.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/dialog_inprogress.xml" value="0.12265625" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/dialog_neworder.xml" value="0.12265625" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/fragment_in_progress.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/fragment_new_order.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/fragment_order_detail.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/history_item.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/inprogess_item.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/inprogress_detail_item.xml" value="0.1" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/nav_drawer.xml" value="0.12265625" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/new_order_item.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/onroute_item.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/order_detail_item.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/pickup_item.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/select_merchant_state.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/layout/spinner_item.xml" value="0.13046875" />
+        <entry key="..\:/Users/abuba/AndroidStudioProjects/Ezata/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.191" />
       </map>
     </option>
   </component>

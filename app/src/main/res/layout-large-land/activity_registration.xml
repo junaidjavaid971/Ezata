@@ -65,18 +65,17 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/tv_pickUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_22sdp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:text="@string/str_pick_up_location"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -108,7 +107,7 @@
                             android:background="@color/light_gray"
                             android:hint="@string/str_pickupLocation"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="@dimen/_6sdp"
                             android:textColorHint="@color/white"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -118,11 +117,11 @@
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/card_iconLocation"
-                            android:layout_width="@dimen/_40sdp"
-                            android:layout_height="@dimen/_40sdp"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
                             android:layout_margin="@dimen/_5sdp"
                             android:padding="@dimen/_20sdp"
-                            app:cardCornerRadius="@dimen/_8sdp"
+                            app:cardCornerRadius="@dimen/_4sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
@@ -133,8 +132,8 @@
                                 android:background="@color/gray">
 
                                 <ImageView
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_10sdp"
                                     android:src="@drawable/ic_location_on"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -151,10 +150,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_22sdp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="@dimen/_8sdp"
                     android:text="@string/str_dropOff_location"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/card_pickUp" />
@@ -164,7 +163,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_20sdp"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -175,17 +174,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#4E4D4D"
-                        android:paddingBottom="@dimen/_14sdp">
+                        android:paddingBottom="@dimen/_10sdp">
 
                         <TextView
                             android:id="@+id/tv_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_12sdp"
-                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
                             android:text="@string/str_name"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_12sdp"
+                            android:textSize="@dimen/_6sdp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -194,10 +193,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_46sdp"
-                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
                             android:text="@string/str_phoneNumber"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_12sdp"
+                            android:textSize="@dimen/_6sdp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@id/tv_name"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -207,10 +206,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_12sdp"
-                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
                             android:text="@string/str_address"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_12sdp"
+                            android:textSize="@dimen/_6sdp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/card_name" />
 
@@ -218,7 +217,7 @@
                             android:id="@+id/card_name"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
                             app:cardCornerRadius="@dimen/_6sdp"
                             android:layout_marginEnd="@dimen/_30sdp"
                             app:layout_constraintEnd_toStartOf="@+id/card_phone"
@@ -234,11 +233,11 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:id="@+id/card_iconName"
-                                    android:layout_width="@dimen/_30sdp"
-                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_width="@dimen/_16sdp"
+                                    android:layout_height="@dimen/_16sdp"
                                     android:layout_margin="@dimen/_5sdp"
                                     android:padding="@dimen/_20sdp"
-                                    app:cardCornerRadius="@dimen/_8sdp"
+                                    app:cardCornerRadius="@dimen/_4sdp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent">
@@ -249,9 +248,8 @@
                                         android:background="@color/gray">
 
                                         <ImageView
-                                            android:layout_width="@dimen/_22sdp"
-                                            android:layout_height="@dimen/_22sdp"
-                                            android:scaleType="center"
+                                            android:layout_width="@dimen/_10sdp"
+                                            android:layout_height="@dimen/_10sdp"
                                             android:src="@drawable/ic_user"
                                             app:layout_constraintBottom_toBottomOf="parent"
                                             app:layout_constraintEnd_toEndOf="parent"
@@ -270,7 +268,7 @@
                                     android:hint="@string/str_Jhon"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
-                                    android:textSize="@dimen/_10sdp"
+                                    android:textSize="@dimen/_6sdp"
                                     android:textStyle="bold"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -283,7 +281,7 @@
                             android:id="@+id/card_phone"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
                             app:cardCornerRadius="@dimen/_6sdp"
                             android:layout_marginEnd="@dimen/_30sdp"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -305,9 +303,9 @@
                                     android:background="@color/light_gray"
                                     android:hint="@string/str_914"
                                     android:textColor="@color/white"
-                                    android:inputType="phone"
                                     android:textColorHint="@color/white"
-                                    android:textSize="@dimen/_10sdp"
+                                    android:textSize="@dimen/_6sdp"
+                                    android:inputType="phone"
                                     android:textStyle="bold"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -316,8 +314,8 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:id="@+id/card_iconPhone"
-                                    android:layout_width="@dimen/_30sdp"
-                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_width="@dimen/_22sdp"
+                                    android:layout_height="@dimen/_16sdp"
                                     android:layout_margin="@dimen/_5sdp"
                                     android:padding="@dimen/_20sdp"
                                     app:cardCornerRadius="@dimen/_8sdp"
@@ -351,8 +349,8 @@
                             android:id="@+id/card_Address"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_10sdp"
-                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
                             app:cardCornerRadius="@dimen/_6sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="@+id/card_phone"
@@ -373,11 +371,11 @@
                                     android:background="@color/light_gray"
                                     android:drawableEnd="@drawable/ic_search"
                                     android:drawableTint="@color/white"
-                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingStart="@dimen/_4sdp"
                                     android:hint="@string/str_address"
                                     android:textColor="@color/white"
                                     android:textColorHint="@color/white"
-                                    android:textSize="@dimen/_10sdp"
+                                    android:textSize="@dimen/_6sdp"
                                     android:textStyle="bold"
                                     android:layout_marginHorizontal="@dimen/_5sdp"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -387,11 +385,11 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:id="@+id/card_iconAddress"
-                                    android:layout_width="@dimen/_30sdp"
-                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_width="@dimen/_16sdp"
+                                    android:layout_height="@dimen/_16sdp"
                                     android:layout_margin="@dimen/_5sdp"
                                     android:padding="@dimen/_20sdp"
-                                    app:cardCornerRadius="@dimen/_8sdp"
+                                    app:cardCornerRadius="@dimen/_4sdp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent">
@@ -402,8 +400,8 @@
                                         android:background="@color/gray">
 
                                         <ImageView
-                                            android:layout_width="@dimen/_16sdp"
-                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_width="@dimen/_10sdp"
+                                            android:layout_height="@dimen/_10sdp"
                                             android:scaleType="fitCenter"
                                             android:src="@drawable/ic_location_on"
                                             app:layout_constraintBottom_toBottomOf="parent"
@@ -424,20 +422,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_22sdp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="@dimen/_8sdp"
                     android:text="@string/str_vehicle_type"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/card_dropOff" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_biCycle"
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_90sdp"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
                     android:layout_marginStart="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     app:cardCornerRadius="@dimen/_5sdp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_vehicle">
@@ -450,8 +448,8 @@
 
                         <LinearLayout
                             android:id="@+id/ivBicycle"
-                            android:layout_width="@dimen/_35sdp"
-                            android:layout_height="@dimen/_35sdp"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
                             android:background="@drawable/circle_bg"
                             android:gravity="center"
                             android:padding="@dimen/_5sdp"
@@ -461,8 +459,8 @@
                             app:layout_constraintTop_toTopOf="parent">
 
                             <ImageView
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="@dimen/_10sdp"
                                 android:src="@drawable/ic_bike"
                                 app:tint="@color/white" />
 
@@ -471,11 +469,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
                             android:paddingTop="@dimen/_3sdp"
                             android:text="Bicycle"
                             android:textColor="@color/white"
-                            android:textSize="18sp"
+                            android:textSize="@dimen/_7sdp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/ivBicycle" />
@@ -485,10 +482,10 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_motorCycle"
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_90sdp"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
                     android:layout_marginStart="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     app:cardCornerRadius="@dimen/_5sdp"
                     app:layout_constraintStart_toEndOf="@+id/card_biCycle"
                     app:layout_constraintTop_toBottomOf="@id/tv_vehicle">
@@ -501,8 +498,8 @@
 
                         <LinearLayout
                             android:id="@+id/ivMotorbike"
-                            android:layout_width="@dimen/_35sdp"
-                            android:layout_height="@dimen/_35sdp"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
                             android:background="@drawable/circle_bg"
                             android:backgroundTint="@color/color3"
                             android:gravity="center"
@@ -513,8 +510,8 @@
                             app:layout_constraintTop_toTopOf="parent">
 
                             <ImageView
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="@dimen/_10sdp"
                                 android:src="@drawable/ic_bike"
                                 app:tint="@color/white" />
 
@@ -523,11 +520,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
                             android:paddingTop="@dimen/_3sdp"
                             android:text="Motorcycle"
                             android:textColor="@color/white"
-                            android:textSize="18sp"
+                            android:textSize="@dimen/_7sdp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/ivMotorbike" />
@@ -537,10 +533,10 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_car"
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_90sdp"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
                     android:layout_marginStart="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     app:cardCornerRadius="@dimen/_5sdp"
                     app:layout_constraintStart_toEndOf="@+id/card_motorCycle"
                     app:layout_constraintTop_toBottomOf="@id/tv_vehicle">
@@ -553,8 +549,8 @@
 
                         <LinearLayout
                             android:id="@+id/ivCar"
-                            android:layout_width="@dimen/_35sdp"
-                            android:layout_height="@dimen/_35sdp"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
                             android:background="@drawable/circle_bg"
                             android:gravity="center"
                             android:padding="@dimen/_5sdp"
@@ -564,8 +560,8 @@
                             app:layout_constraintTop_toTopOf="parent">
 
                             <ImageView
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="@dimen/_10sdp"
                                 android:src="@drawable/ic_car"
                                 app:tint="@color/white" />
 
@@ -574,11 +570,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
                             android:paddingTop="@dimen/_3sdp"
                             android:text="Car"
                             android:textColor="@color/white"
-                            android:textSize="18sp"
+                            android:textSize="@dimen/_7sdp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/ivCar" />
@@ -592,10 +587,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_22sdp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="@dimen/_8sdp"
                     android:text="@string/str_item_size"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/card_motorCycle" />
@@ -605,11 +600,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_22sdp"
-                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:background="@drawable/bg_buttons_pickup"
                     android:text="@string/str_small"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_itemSize" />
@@ -619,11 +614,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_14sdp"
-                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:background="@drawable/bg_btn_orange"
                     android:text="@string/str_medium"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/tvSmall"
                     app:layout_constraintTop_toBottomOf="@+id/tv_itemSize" />
@@ -633,11 +628,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_14sdp"
-                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:background="@drawable/bg_buttons_pickup"
                     android:text="@string/str_large"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/tvMedium"
                     app:layout_constraintTop_toBottomOf="@+id/tv_itemSize" />
@@ -647,10 +642,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_22sdp"
-                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
                     android:text="@string/str_driveryTime"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvSmall" />
@@ -659,12 +654,12 @@
                     android:id="@+id/tvSoonPossible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_14sdp"
-                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_22sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:background="@drawable/bg_buttons_pickup"
                     android:text="@string/str_soon_possible"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvDeliveryTime" />
@@ -674,11 +669,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_14sdp"
-                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:background="@drawable/bg_btn_orange"
                     android:text="@string/str_30Mins"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@+id/tvSoonPossible"
                     app:layout_constraintTop_toBottomOf="@+id/tvDeliveryTime" />
@@ -697,14 +692,14 @@
                     android:id="@+id/tvSubmit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:background="@drawable/bg_btn_orange"
                     android:paddingStart="@dimen/_70sdp"
                     android:paddingEnd="@dimen/_70sdp"
                     android:text="@string/str_submit"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

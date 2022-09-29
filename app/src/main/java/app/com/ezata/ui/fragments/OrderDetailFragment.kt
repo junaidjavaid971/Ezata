@@ -2,22 +2,16 @@ package app.com.ezata.ui.fragments
 
 import android.app.AlertDialog
 import android.graphics.Color
-import app.com.ezata.model.OrderDetail
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import android.os.Bundle
-import androidx.databinding.DataBindingUtil
-import app.com.ezata.R
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.LinearLayoutManager
-import app.com.ezata.adapter.OrderDetailAdapter
 import android.graphics.drawable.ColorDrawable
-import android.util.Log
+import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import app.com.ezata.adapter.OrderDetailAdapter
 import app.com.ezata.databinding.DialogNeworderBinding
 import app.com.ezata.databinding.FragmentOrderDetailBinding
 import app.com.ezata.model.OrderItems
@@ -26,7 +20,6 @@ import app.com.ezata.utils.OrderStatus
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.util.ArrayList
 
 class OrderDetailFragment : Fragment() {
 
@@ -113,8 +106,8 @@ class OrderDetailFragment : Fragment() {
         alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         alertDialog.show()
         dialogBinding.ivFullsize.setOnClickListener { v: View? -> alertDialog.dismiss() }
-        alertDialog.window?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT)
-
+        //    alertDialog.window?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT)
+        alertDialog.window!!.setLayout(1400, WindowManager.LayoutParams.MATCH_PARENT)
         dialogBinding.apply {
             btnAcceptOrder.setOnClickListener {
                 alertDialog.dismiss()
@@ -154,7 +147,8 @@ class OrderDetailFragment : Fragment() {
 
         binding.apply {
             tvOrderNumber.text = ordersParse?.orderNumber ?: "Not Set"
-            tvCustomerName.text = "${ordersParse?.user?.get("first_name") ?: ""} ${ordersParse?.user?.get("last_name") ?: ""}".ifBlank { "Customer Name" }
+            tvCustomerName.text =
+                "${ordersParse?.user?.get("first_name") ?: ""} ${ordersParse?.user?.get("last_name") ?: ""}".ifBlank { "Customer Name" }
             totalItemsTv.text = "${orderItems.size} items"
             tvSubTotal.text = "Subtotal $${"%.2f".format(subTotal)}"
             tvTax.text = "Tax(15%) $${"%.2f".format(tax)}"

@@ -97,10 +97,13 @@ class InProgressOrderDetailsFragment : Fragment() {
         alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         alertDialog.show()
         dialogBinding.ivFullsize.setOnClickListener { v: View? -> alertDialog.dismiss() }
+        alertDialog.window!!.setLayout(1400, WindowManager.LayoutParams.MATCH_PARENT)
+/*
         alertDialog.window?.setLayout(
             WindowManager.LayoutParams.MATCH_PARENT,
             WindowManager.LayoutParams.MATCH_PARENT
         )
+*/
 
 
         dialogBinding.apply {
