@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "440852884598",
+    "project_id": "ezata-merchant",
+    "storage_bucket": "ezata-merchant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440852884598:android:feceec8e7dc7c5f64c0357",
+        "android_client_info": {
+          "package_name": "com.ezata.MerchantTablet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440852884598-bi6iea8e7ng12c8f28r8vo23ts7687hh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ezata.MerchantTablet",
+            "certificate_hash": "7983709689a1f1fbe70cfeea48177c25433872da"
+          }
+        },
+        {
+          "client_id": "440852884598-6k5grli2fgiim7fp2ppjiqbfte18ksfh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmARTTkmnYg0n0nWq5WdvYaEe187J7kHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440852884598-6k5grli2fgiim7fp2ppjiqbfte18ksfh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

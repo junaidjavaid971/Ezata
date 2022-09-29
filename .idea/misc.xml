@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/bg_btn_orange.xml" value="0.1435" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/circle_bg.xml" value="0.188" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/ic_car.xml" value="0.1" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/ic_phone.xml" value="0.1435" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/ic_phone_registration.xml" value="0.1435" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/neworder_item_shape.xml" value="0.1755" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/prepare_orders.xml" value="0.1695" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/drawable/selectpickup.xml" value="0.1695" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-land/activity_registration.xml" value="0.15507692762747333" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/activity_history.xml" value="0.14769231202616506" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/activity_main.xml" value="0.1984375" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/activity_pick_up_ready.xml" value="0.1" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/activity_registration.xml" value="0.176" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/dialog_history.xml" value="0.152" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/dialog_inprogress.xml" value="0.12" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/fragment_in_progress_order_details.xml" value="0.16328125" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/inprogess_item.xml" value="0.16328125" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/nav_drawer.xml" value="0.171484375" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/new_order_item.xml" value="0.1984375" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/onroute_item.xml" value="0.1984375" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/order_detail_item.xml" value="0.1984375" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large-land/pickup_item.xml" value="0.18461539003270633" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large/activity_main.xml" value="0.178515625" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout-large/activity_registration.xml" value="0.150390625" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/activity_main.xml" value="0.20052083333333334" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/activity_pick_up_ready.xml" value="0.203125" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/activity_registration.xml" value="0.1" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/dialog_inprogress.xml" value="0.23541666666666666" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/fragment_in_progress_order_details.xml" value="0.203125" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/fragment_order_detail.xml" value="0.23802083333333332" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/loading_layout_orders.xml" value="0.203125" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/nav_drawer.xml" value="0.20052083333333334" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/new_order_item.xml" value="0.203125" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/on_route_countdown_dialog.xml" value="0.20052083333333334" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/pickup_item.xml" value="0.23802083333333332" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/pickuplocation_item.xml" value="0.18461539003270633" />
+        <entry key="..\:/Documents/Android Studio Projects/ezata-Merchant-main/app/src/main/res/layout/ready_for_pickup_countdown_dialog.xml" value="0.18461539003270633" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
