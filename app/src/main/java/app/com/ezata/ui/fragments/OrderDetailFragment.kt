@@ -107,7 +107,8 @@ class OrderDetailFragment : Fragment() {
         alertDialog.show()
         dialogBinding.ivFullsize.setOnClickListener { v: View? -> alertDialog.dismiss() }
         //    alertDialog.window?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT)
-        alertDialog.window!!.setLayout(1400, WindowManager.LayoutParams.MATCH_PARENT)
+        val width = (resources.displayMetrics.widthPixels * 0.90).toInt()
+        alertDialog.window!!.setLayout(width, WindowManager.LayoutParams.MATCH_PARENT)
         dialogBinding.apply {
             btnAcceptOrder.setOnClickListener {
                 alertDialog.dismiss()
